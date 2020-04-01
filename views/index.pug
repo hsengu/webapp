@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.sidenav
+    a(href='/projects') Projects
+    a(href='/about') About
+    a(href='/contact') Contact
+
+  div.main
+    h1= title
+    p Welcome to #{title}
