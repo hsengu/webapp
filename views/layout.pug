@@ -1,7 +1,29 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title= "Sticky Bar Menu"
+    link(rel='stylesheet', type="text/css", href='/stylesheets/style.css')
+    script(src="https://code.jquery.com/jquery-3.4.1.js").
+    script(type="text/javascript").
+      $(window).on('scroll', function(){
+        if($(window).scrollTop()){
+          $('nav').addClass('black');
+        }
+        else {
+          $('nav').removeClass('black');
+        }
+      });
   body
-    block content
+    nav
+      div.logo
+        img(src='/img/logo.png')
+      ul
+        li
+          a(href='/') Home
+        li
+          a(href='/about') About
+        li
+          a(href='/portfolio') Portfolio
+        li
+          a(href='/contact') Contact
+block content
