@@ -46,12 +46,15 @@ nav .logo {
 
 nav .logo img {
   height: 80px;
-  transition: .5s;
+  transition: .5s ease-in-out;
+  content: url('../img/logo_full.png');
 }
 
 nav.black .logo img {
   height: 60px;
   filter: invert(1);
+  transition: .5s ease-in-out;
+  content: url('../img/logo.png');
 }
 
 nav ul {
