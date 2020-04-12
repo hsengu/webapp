@@ -97,27 +97,34 @@ nav ul li a:hover {
   overflow: auto;
   height: 100%;
   padding: 80px 100px 50px 100px;
-  background: linear-gradient(
+  background:
+    linear-gradient(
           rgba(0, 0, 0, 0.50),
           rgba(0, 0, 0, 0.50)
-  ),
-  url(../img/bg1.jpg);
+    ),
+    url('../img/bg1.jpg');
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background-attachment: local;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #ffffff;
-  transition: 1s;
+  transition: .5s;
 }
 
 #section2 {
   overflow: auto;
   height: 100%;
   padding: 60px 100px 50px 100px;
-  background: linear-gradient(
+  background:
+    linear-gradient(
           rgba(0, 0, 0, 0.50),
           rgba(0, 0, 0, 0.50)
-  );
+    ),
+    url('../img/bg2.jpg');
   background-size: cover;
+  background-attachment: local;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #ffffff;
 }
 

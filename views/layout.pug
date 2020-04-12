@@ -4,13 +4,5 @@ html
     title= title
     link(rel='stylesheet', type="text/css", href='/stylesheets/style.css')
     script(src='https://code.jquery.com/jquery-3.4.1.js')
-    script(type='text/javascript').
-      $(window).on('scroll', function() {
-        if($(window).scrollTop()) {
-          $('nav').addClass('black');
-        }
-        else {
-          $('nav').removeClass('black');
-        }
-      });
+    script(type='text/javascript', src='/js/navbar.js').
 block content

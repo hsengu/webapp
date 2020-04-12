@@ -74,54 +74,12 @@ block content
                  p Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vel vulputate arcu. Suspendisse eu sollicitudin metus. Sed maximus convallis elit ut posuere. In enim elit, pharetra eget hendrerit id, eleifend in lorem. Cras quis tortor et leo commodo venenatis vitae et massa. Duis suscipit in felis quis feugiat.
     footer
         p &#169; 2020 Hok S. Uy
+        script(type='text/javascript').
+            //<![CDATA[
+                var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+                document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+            //]]>
+        script(language='JavaScript', type='text/javascript').
+            TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_sm_124x32.png", "POSDV", "none");
 
-    script(type='text/javascript').
-        var lastId,
-            navMenu = $("#myNavbar"),
-            navMenuHeight = navMenu.outerHeight() + 15,
-            menuItems = navMenu.find("a"),
-            scrollItems = menuItems.map(function () {
-                var item = $($(this).attr("href"));
-                if (item.length) {
-                    return item;
-                }
-            });
-
-        menuItems.click(function (e) {
-            var href = $(this).attr("href"),
-                offsetTop = href === "#" ? 0 : $(href).offset().top - navMenuHeight + 1;
-            $('html, body').stop().animate({
-                scrollTop: offsetTop
-            }, 1000);
-            e.preventDefault();
-        });
-
-        $(window).scroll(function () {
-            var fromTop = $(this).scrollTop() + navMenuHeight;
-
-            var cur = scrollItems.map(function () {
-                if ($(this).offset().top < fromTop)
-                    return this;
-            });
-            cur = cur[cur.length - 1];
-            var id = cur && cur.length ? cur[0].id : "";
-
-            if (lastId !== id) {
-                lastId = id;
-                menuItems
-                    .parent().removeClass("active")
-                    .end().filter("[href='#" + id + "']").parent().addClass("active");
-            }
-        });
-
-        (function () {
-            var parallax = document.querySelectorAll("div.container-fluid"),
-                speed = 0.1;
-            window.onscroll = function () {
-                [].slice.call(parallax).forEach(function (el, i) {
-                    var windowYOffset = window.pageYOffset,
-                        elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-                    el.style.backgroundPosition = elBackgrounPos;
-                });
-            };
-        })();
+    script(type='text/javascript', src='/js/scroll.js')
