@@ -41,7 +41,7 @@ $(window).scroll(function () {
     window.onscroll = function () {
         [].slice.call(parallax).forEach(function (el, i) {
             var windowYOffset = window.pageYOffset,
-               elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+               elBackgrounPos = "50% " + (windowYOffset * -speed) + "px";
             el.style.backgroundPosition = elBackgrounPos;
         });
     };
