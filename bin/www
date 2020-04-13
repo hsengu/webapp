@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 var app = require('../app');
+var httpApp = require('../app');
 var debug = require('debug')('webapp:server');
 var http = require('http');
 var https = require('https');
@@ -21,19 +22,25 @@ var options = {
 var port = normalizePort(process.env.PORT || '4300');
 var httpPort = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+httpApp.set('port', httpPort);
 
 /**
  * Create HTTP server.
  */
 var server = https.createServer(options, app);
-http.createServer(app).listen(httpPort);
+var httpServer = http.createServer(httpApp);
 var https
+var http
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 server.listen(port, function() {
   debug('HTTPS Server listening on port: ' + app.get('port'));
+});
+
+httpServer.listen(httpPort, function() {
+  debug('HTTP Server listening on port: ' + httpApp.get('port'));
 });
 //httpServer.on('error', onError);
 //httpServer.on('listening', onListening);
