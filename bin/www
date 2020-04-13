@@ -3,9 +3,7 @@
 /**
  * Module dependencies.
  */
-
 var app = require('../app');
-var sec_app = require('../app');
 var debug = require('debug')('webapp:server');
 var http = require('http');
 var https = require('https');
@@ -20,31 +18,25 @@ var options = {
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || '3000');
-var ssl_port = normalizePort(process.env.PORT || '4300');
+var port = normalizePort(process.env.PORT || '4300');
+var httpPort = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-sec_app.set('port', ssl_port);
 
 /**
  * Create HTTP server.
  */
-
-var server = http.createServer(app);
-var http
-var https_server = https.createServer(options, sec_app);
+var server = https.createServer(options, app);
+http.createServer(app).listen(httpPort);
 var https
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-
-server.listen(port);
-https_server.listen(ssl_port, function() {});
-server.on('error', onError);
-server.on('listening', onListening);
-//https_server.on('error', onError);
-//https_server.on('listening', onError);
+server.listen(port, function() {
+  debug('HTTPS Server listening on port: ' + app.get('port'));
+});
+//httpServer.on('error', onError);
+//httpServer.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
