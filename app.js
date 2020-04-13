@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+debug(app.get('env'));
 
 if(app.get('env') == 'production')
   app.all('*', ensureSecure);
