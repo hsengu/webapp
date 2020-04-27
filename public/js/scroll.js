@@ -1,5 +1,5 @@
 var lastId,
-    navMenu = $("#myNavbar"),
+    navMenu = $("#navbarBasicExample"),
     navMenuHeight = navMenu.outerHeight() + 15,
     menuItems = navMenu.find("a"),
     scrollItems = menuItems.map(function () {
@@ -26,23 +26,4 @@ $(window).scroll(function () {
     });
     cur = cur[cur.length - 1];
     var id = cur && cur.length ? cur[0].id : "";
-
-    if (lastId !== id) {
-        lastId = id;
-        menuItems
-            .parent().removeClass("active")
-            .end().filter("[href='#" + id + "']").parent().addClass("active");
-    }
 });
-
-(function () {
-    var parallax = document.querySelectorAll("div.container-fluid"),
-    speed = 0.1;
-    window.onscroll = function () {
-        [].slice.call(parallax).forEach(function (el, i) {
-            var windowYOffset = window.pageYOffset,
-               elBackgrounPos = "50% " + (windowYOffset * -speed) + "px";
-            el.style.backgroundPosition = elBackgrounPos;
-        });
-    };
-})();

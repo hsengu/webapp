@@ -1,10 +1,27 @@
-.animate-fadeUp { -webkit-animation: fadeIn 2s, translate-up 1s; animation: fadeIn 2s, translate-up 1s; }
+.animate-fadeUp {
+  -webkit-animation: fadeIn 2s, translate-up 1s;
+  animation: fadeIn 2s, translate-up 1s;
+}
 
-.animate-fadeDown { -webkit-animation: fadeIn 2s, translate-down 0.75s; animation: fadeIn 2s, translate-down 0.75s; }
+.animate-fadeDown {
+  -webkit-animation: fadeIn 2s, translate-down 0.75s;
+  animation: fadeIn 2s, translate-down 0.75s;
+}
 
-.animate-fadeLeft { -webkit-animation: fadeIn 2s, translate-left 1s; animation: fadeIn 2s, translate-left 1s; }
+.animate-fadeLeft {
+  -webkit-animation: fadeIn 2s, translate-left 1s;
+  animation: fadeIn 2s, translate-left 1s;
+}
 
-.animate-fadeRight { -webkit-animation: fadeIn 2s, translate-right 1s; animation: fadeIn 2s, translate-right 1s; }
+.animate-fadeRight {
+  -webkit-animation: fadeIn 2s, translate-right 1s;
+  animation: fadeIn 2s, translate-right 1s;
+}
+
+.animate-fadeIn {
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
 
 @-webkit-keyframes "fadeIn" { from { opacity: 0; }
   to { opacity: 1; } }
@@ -20,3 +37,19 @@
 
 @-webkit-keyframes "translate-left" { 0% { -webkit-transform: translateX(50px); transform: translateX(50px); }
   100% { -webkit-transform: translateX(0); transform: translateX(0); } }
+
+.section1 {
+  background: linear-gradient(
+        rgba(0, 0, 0, 0.50),
+        rgba(0, 0, 0, 0.50)
+    ),
+    url('../img/bg1.jpg') center center;
+}
+
+.badge {
+  padding: 15px;
+}
+
+.nav-badge {
+  padding-right: 15px;
+}
