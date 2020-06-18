@@ -21,8 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 debug(app.get('env'));
 
-if(app.get('env') == 'production')
-  app.all('*', ensureSecure);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
@@ -40,12 +38,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-/* function ensureSecure(req, res, next) {
-  if(req.secure) {
-    return next();
-  };
-  res.redirect('https://' + req.hostname + req.url);
-}; */
 
 module.exports = app;
