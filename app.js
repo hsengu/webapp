@@ -41,11 +41,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-function ensureSecure(req, res, next) {
+/* function ensureSecure(req, res, next) {
   if(req.secure) {
     return next();
   };
   res.redirect('https://' + req.hostname + req.url);
-};
+}; */
 
 module.exports = app;

@@ -4,11 +4,8 @@
  * Module dependencies.
  */
 var app = require('../app');
-var httpApp = require('../app');
 var debug = require('debug')('webapp:server');
 var http = require('http');
-var https = require('https');
-var fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
