@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git pull
 docker stop node-app
 docker rm -f node-app
 docker rmi -f node-app
