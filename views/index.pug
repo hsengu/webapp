@@ -1,73 +1,55 @@
 extends layout
 
 block content
-	body(id='top')
-		nav(class='navbar is-link animate-fadeDown', role='navigation', aria-label='main navigation')
-			div(class='navbar-brand')
-				a(class='navbar-item', href='/')
-					img(src='/img/logo_full.png')
-				a(role='button', class='navbar-burger burger', aria-label='menu', aria-expanded='false', data-target='navbarBasicExample')
-					span(aria-hidden='true')
-					span(aria-hidden='true')
-					span(aria-hidden='true')
-			div(id='navbarBasicExample', class='navbar-menu')
-				div(class='navbar-start')
-					a(class='navbar-item') Home
-					a(class='navbar-item') About
-					a(class='navbar-item') Portfolio
-					a(class='navbar-item') Contact
-				div(class='navbar-end')
-					div(class='navbar-item has-dropdown is-hoverable')
-						a(class='navbar-link') More
-						div(class='navbar-dropdown is-right animate-fadeIn')
-							a(class='navbar-item', href='https://github.com/hsengu')
-								img(src='/img/badges/github.png', class='nav-badge', width='40')
-								span GitHub
-							a(class='navbar-item', href='https://www.linkedin.com/')
-								img(src='/img/badges/linkedin.png', class='nav-badge', width='40')
-								span LinkedIn
-							a(class='navbar-item') Report an issue
-		section(class='hero is-white has-text-centered section1 animate-fadeIn')
+	body(id='top' style='overflow: hidden')
+		section(class='hero is-white has-text-centered section1 animate-fadeIn is-fullheight')
+			div(class='hero-head')
+				nav(class='navbar is-link animate-fadeDown', role='navigation', aria-label='main navigation')
+					div(class='navbar-brand')
+						a(class='navbar-item is-active', href='/')
+							img(src='/img/logo.png')
+						a(role='button', class='navbar-burger burger', aria-label='menu', aria-expanded='false', data-target='navbarBasicExample')
+							span(aria-hidden='true')
+							span(aria-hidden='true')
+							span(aria-hidden='true')
+					div(id='navbarBasicExample', class='navbar-menu')
+						div(class='navbar-start')
+							a(class='navbar-item') About
+							a(class='navbar-item') Portfolio
+							a(class='navbar-item') Contact
+						div(class='navbar-end')
+							div(class='navbar-item has-dropdown is-hoverable')
+								a(class='navbar-link') More
+								div(class='navbar-dropdown is-right animate-fadeIn')
+									a(class='navbar-item', href='https://github.com/hsengu')
+										img(src='/img/badges/github.png', class='nav-badge', width='40')
+										span GitHub
+									a(class='navbar-item', href='https://www.linkedin.com/')
+										img(src='/img/badges/linkedin.png', class='nav-badge', width='40')
+										span LinkedIn
+									a(class='navbar-item') Report an issue
 			div(class='hero-body')
 				div(class='container')
 					div(class='columns is-centered')
 						div(class='column')
 							h1(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile animate-fadeRight has-text-white') Hello World!
-							h2(class='subtitle is-size-4-desktop animate-fadeLeft has-text-white') My name is Hok. I am an IT professional and developer who's seeking new opportunities!
-		section(class='hero is-white has-text-centered section2 animate-fadeIn')
-			div(class='hero-body')
-				div(class='container')
-					div(class='columns is-centered')
+							h2(class='subtitle is-size-4-desktop animate-fadeLeft has-text-white') My name is Hok. I am an IT Professional and Developer who's seeking new opportunities!
+					div(class='columns is-one-quarter')
 						div(class='column')
-							h1(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile animate-fadeRight') Getting to know me...
-							h2(class='subtitle is-size-4-desktop animate-fadeLeft') This is placeholder text for my about section...
-		section(class='hero is-white has-text-centered section3 animate-fadeIn')
-			div(class='hero-body')
-				div(class='container')
-					div(class='columns is-centered')
 						div(class='column')
-							h1(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile animate-fadeRight') What I've done...
-							h2(class='subtitle is-size-4-desktop animate-fadeLeft') This is placeholder text for my portfolio section...
-		section(class='hero is-white has-text-centered section4 animate-fadeIn')
-			div(class='hero-body')
-				div(class='container')
-					div(class='columns is-centered')
 						div(class='column')
-							h1(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile animate-fadeRight') Getting in touch with me...
-							h2(class='subtitle is-size-4-desktop animate-fadeLeft') This is placeholder text for my contact section...
-	footer
-		section(class='hero is-white has-text-centered animate-fadeIn')
-			div(class='hero-body')
-				div(class='columns')
-					div(class='column')
-						p(class='') Copyright 2020 - Hok S. Uy
+							div(class='buttons')
+								div(class='button is-medium is-transparent-button') See more...
+			div(class='hero-foot has-text-white')
 				div(class='columns is-centered')
-					div(class='column')
-						a(href='https://bulma.io')
-							img(src='/img/badges/made-with-bulma--black.png', width='192')
+					div(class='column img-container')
+						a(href='https://bulma.io', class='badge')
+							img(src='/img/badges/made-with-bulma--semiwhite.png', width='192')
 						a(href='https://www.w3.org', class='badge')
 							img(src='/img/badges/HTML5_Badge_512.png', width='36')
+						a(href='https://www.nginx.com', class='badge')
+							img(src='/img/badges/Nginx_logo.png', width='96')
 						a(href='https://www.nodejs.org/', class='badge')
-							img(src='/img/badges/nodejs-new-pantone-black.png', width='60')
+							img(src='/img/badges/nodejs.png', width='72')
 						a(href='https://www.docker.com', class='badge')
 							img(src='/img/badges/docker.png', width='36')

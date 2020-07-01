@@ -53,3 +53,14 @@
 .nav-badge {
   padding-right: 15px;
 }
+
+.is-transparent-button {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.img-container {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
