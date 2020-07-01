@@ -26,3 +26,8 @@ srv/
 *.rar
 *.tar
 *.zip
+
+# Files #
+#########
+*.old
+*.bak
