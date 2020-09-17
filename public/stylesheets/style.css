@@ -4,6 +4,7 @@
         rgba(0, 0, 0, 0.50)
     ),
     url('../img/bg1.jpg') center center;
+  background-size: cover;
 }
 
 .section2 {
@@ -12,6 +13,7 @@
           rgba(0, 0, 0, 0.50)
   ),
   url('../img/bg2.jpg') center center;
+  background-size: cover;
 }
 
 .badge {
