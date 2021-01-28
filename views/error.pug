@@ -14,7 +14,7 @@ block content
                 span(aria-hidden='true')
                 span(aria-hidden='true')
                 span(aria-hidden='true')
-            div(id='navbarBasicExample', class='navbar-menu')
+            div(id='navbarBasicExample', class='navbar-menu has-text-black')
               div(class='navbar-start')
                 a(class='navbar-item' href ='/') Home
                 a(class='navbar-item' href='/blog') Blog
@@ -34,9 +34,9 @@ block content
           div(class='container')
             div(class='columns is-centered')
               div(class='column')
-                h1(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile has-text-white animate-fadeRight') Looks like you shouldn't be here!
-                h2(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile has-text-white animate-fadeLeft') You'll be taken home in just a bit...
-                p(class='has-text-white animate-fadeUp')= error.stack
+                h1(class='title is-spaced is-size-1-desktop -is-size-1-tablet is-size-1-mobile has-text-danger animate-fadeDown')= error.status
+                h2(class='subtitle is-size-4-desktop -is-size-4-tablet is-size-5-mobile has-text-white animate-fadeRight') Oops, looks like you shouldn't be here!
+                h2(class='subtitle is-size-4-desktop -is-size-4-tablet is-size-5-mobile has-text-white animate-fadeLeft') You'll be taken home in just a bit...
         div(class='hero-foot has-text-white')
           div(class='columns is-centered animate-fadeUp')
             div(class='column animate-float')
