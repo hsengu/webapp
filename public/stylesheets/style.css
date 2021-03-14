@@ -1,3 +1,6 @@
+@bg: #2d2d37;
+@primary: #fd6b21;
+
 .badge {
   padding: 15px;
 }
@@ -72,4 +75,10 @@ section:nth-child(2n) {
   ),
   url('../img/bg2.jpg') center center;
   background-size: cover;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+  color: white;
 }

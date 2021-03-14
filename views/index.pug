@@ -2,9 +2,9 @@ extends layout
 
 block content
 	main(class='scroll-container')
-		body(id='top' style='overflow: hidden')
+		body(id='top', style='overflow: hidden')
 			section(class='hero has-text-centered animate-fadeIn is-fullheight' id='section1')
-				div(class='hero-head')
+				div(class='hero-head safari_only')
 					nav(class='navbar is-link is-fixed-top animate-fadeDown', role='navigation', aria-label='main navigation')
 						div(class='navbar-brand')
 							a(class='navbar-item', href='/')
@@ -36,12 +36,10 @@ block content
 							div(class='column animate-fadeRight')
 								h1(class='title is-spaced is-size-1-desktop -is-size-2-tablet is-size-3-mobile has-text-white animate-bounce') Hello World!
 								h2(class='subtitle is-size-4-desktop has-text-white animate-fadeLeft') My name is Hok. I am an IT Professional and Developer who's seeking new opportunities!
-						div(class='columns is-one-quarter animate-fadeIn')
-							div(class='column')
-							div(class='column')
-							div(class='column')
-								div(class='buttons')
-									a(class='button is-medium is-white is-rounded is-outlined', onClick="document.getElementById('section2').scrollIntoView();") Learn more...
+				div(class='hero-foot has-text-white')
+					div(class='columns is-centered animate-fadeDown')
+						div(class='arrow arrow-bounce')
+							a(class='fa fa-arrow-down fa-2x', style='color: white', onClick="document.getElementById('section2').scrollIntoView();")
 			section(class='hero is-white has-text-centered animate-fadeIn is-fullheight' id='section2')
 				div(class='hero-body')
 					div(class='container')
