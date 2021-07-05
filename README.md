@@ -20,5 +20,5 @@ This is meant to be a Docker containerized Node.js app for hosting my portfolio 
 ## Screenshots
 ![Main Page](./Screenshots/001.jpg)
 
-#Contributors
+# Contributors
 - Hok S. Uy
