@@ -17,5 +17,8 @@ This is meant to be a Docker containerized Node.js app for hosting my portfolio 
 - Ghost blog
 - AWS Lightsail
 
+## Screenshots
+![Main Page](./Screenshots/001.jpg)
+
 #Contributors
 - Hok S. Uy
