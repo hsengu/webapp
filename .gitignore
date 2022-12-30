@@ -31,4 +31,3 @@ srv/
 #########
 *.old
 *.bak
-deploy-app.sh
