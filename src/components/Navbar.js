@@ -1,11 +1,11 @@
-import {useState} from 'react'
-import {Dialog, DialogPanel} from '@headlessui/react'
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+import { useState } from 'react'
+import { Dialog, DialogPanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    {name: 'Home', href: '/'},
-    {name: 'Contact', href: '/contact'},
-    {name: 'Blog', href: '/blog'},
+    { name: 'Home', href: '/' },
+    { name: 'Say Hi!', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
 ]
 
 export default function Navbar() {
@@ -31,13 +31,13 @@ export default function Navbar() {
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
                         <a key={item.name} href={item.href}
-                           className="text-sm font-semibold leading-6 text-gray-300">
+                            className="text-sm font-semibold leading-6 text-gray-300">
                             {item.name}
                         </a>
                     ))}
@@ -49,12 +49,12 @@ export default function Navbar() {
                 </div>
             </nav>
             <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                <div className="fixed inset-0 z-50"/>
+                <div className="fixed inset-0 z-50" />
                 <DialogPanel
-                    className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
+                            <span className="sr-only">hsengu.com</span>
                             <img
                                 className="h-8 w-auto"
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -67,7 +67,7 @@ export default function Navbar() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
+                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
@@ -88,7 +88,7 @@ export default function Navbar() {
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-300 hover:bg-gray-50"
                                 >
-                                    Log in
+                                    Hire me!
                                 </a>
                             </div>
                         </div>

@@ -1,9 +1,11 @@
 import '../assets/css/About.css';
+import Typewriter from 'typewriter-effect';
 
 export default function About() {
     return (
-        <div className="bg-black flex flex-col h-screen overflow-hidden">
-              <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="bg-black flex flex-col h-screen overflow-hidden relative">
+            <div className="absolute bgimg h-screen w-screen"/>
+            <div className="relative isolate px-6 pt-14 lg:px-8">
                 <div
                     className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                     aria-hidden="true"
@@ -19,25 +21,33 @@ export default function About() {
                 <div className="mx-auto max-w-screen-xl py-32 sm:py-48 lg:py-56">
                     <div className="text-center">
                         <h1 className="text-4xl font-extrabold tracking-tight text-center text-white sm:text-6xl">
-                            Hello World!
+                        <Typewriter
+                            options={{
+                                strings: ['Hello World!'],
+                                cursor: '_',
+                                deleteSpeed: 9999999999999,
+                                autoStart: true,
+                                loop: false,
+                            }}
+                        />
                         </h1>
-                        <br/>
+                        <br />
                         <div
                             className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white text-center">
                             <span>My name is Hok, I am a</span>
                             <span
                                 className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
-                                            <ul className="block animate-text-slide-3 text-left leading-tight [&_li]:block">
-                                                <li>&nbsp;Developer<span
-                                                    className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
-                                                <li><span
-                                                    className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">n</span> I.T. Professional<span
-                                                    className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
-                                                <li>&nbsp;Nerd<span
-                                                    className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
-                                                <li aria-hidden="true">&nbsp;Developer<span
-                                                    className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
-                                            </ul>
+                                <ul className="block animate-text-slide-3 text-left leading-tight [&_li]:block">
+                                    <li>&nbsp;Developer<span
+                                        className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
+                                    <li><span
+                                        className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">n</span> I.T. Professional<span
+                                            className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
+                                    <li>&nbsp;Nerd<span
+                                        className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
+                                    <li aria-hidden="true">&nbsp;Developer<span
+                                        className="font-bold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-white">.</span></li>
+                                </ul>
                             </span>
                         </div>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
