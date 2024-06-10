@@ -1,10 +1,11 @@
 import About from '../pages/About';
-import Test from '../pages/Test';
+import Projects from '../pages/Projects';
 
 export default function Home() {
     return (
         <>
             <About/>
+            <Projects id="projects"/>
         </>
     )
 }

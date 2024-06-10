@@ -4,7 +4,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="absolute inset-x-0 bottom-0 z-50">
+        <footer className="absolute inset-x-0 bottom-0 z-50 sticky bg-black">
             <div className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex">
                     <span className="text-sm text-gray-300 sm:text-center dark:text-gray-400">© {getDate()} <a
